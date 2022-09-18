@@ -2,6 +2,7 @@ var initialPrice = document.querySelector('#initial-price');
 var stocksQuantity = document.querySelector('#stocks-quantity');
 var currentPrice = document.querySelector('#current-price');
 var submitBtn = document.querySelector('#submit-btn');
+var clearBtn = document.querySelector('#clear-btn');
 var outputBox = document.querySelector('#output-box');
 outputBox.style.display = 'none';
 
@@ -47,3 +48,9 @@ function showOutput(message,it){
 }
 
 submitBtn.addEventListener('click',submitHandler);
+clearBtn.addEventListener('click',()=> {
+    outputBox.style.display="none";
+    initialPrice.value="";
+    stocksQuantity.value="";
+    currentPrice.value="";
+})
